@@ -17,7 +17,7 @@ public class CommandAutoShutdown extends CommandBase {
 
     @Override
     public String getCommandUsage(ICommandSender var1) {
-        return "/" + getCommandName() + " [postpone=pp|on|off]";
+        return "/" + getCommandName() + " [postpone=pp|on|off|status=s]";
     }
 
     @Override
