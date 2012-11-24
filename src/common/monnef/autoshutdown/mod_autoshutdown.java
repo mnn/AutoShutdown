@@ -78,6 +78,7 @@ public class mod_autoshutdown {
 
     @Mod.ServerStarting
     public void serverStarting(FMLServerStartingEvent event) {
+        if (server == null) server = ModLoader.getMinecraftServerInstance();
         ICommandManager commandManager = server.getCommandManager();
         ServerCommandManager serverCommandManager = ((ServerCommandManager) commandManager);
         addCommands(serverCommandManager);

@@ -1,6 +1,9 @@
 package monnef.autoshutdown;
 
+import com.google.common.base.Joiner;
+import net.minecraft.server.MinecraftServer;
 import net.minecraft.src.CommandBase;
+import net.minecraft.src.Entity;
 import net.minecraft.src.ICommandSender;
 
 import java.util.ArrayList;
@@ -26,27 +29,38 @@ public class CommandAutoShutdown extends CommandBase {
 
     @Override
     public void processCommand(ICommandSender var1, String[] var2) {
-        if (var2.length > 1) {
-            switch (var2[0]) {
-                case "postpone":
-                case "pp":
-                    mod_autoshutdown.minutesServerIsDead = 0;
-                    break;
+        boolean printStatus = false;
+        boolean ok = false;
+        boolean skipLog = false;
 
-                case "on":
-                    mod_autoshutdown.active = true;
-                    break;
-
-                case "off":
-                    mod_autoshutdown.active = false;
-                    break;
-
-                default:
-                    break;
+        if (var2.length >= 1) {
+            String t = var2[0].toLowerCase();
+            if (t.equals("postpone") || t.equals("pp")) {
+                mod_autoshutdown.minutesServerIsDead = 0;
+                ok = printStatus = true;
+            } else if (t.equals("on")) {
+                mod_autoshutdown.active = true;
+                ok = printStatus = true;
+            } else if (t.equals("off")) {
+                mod_autoshutdown.active = false;
+                ok = printStatus = true;
+            } else if (t.equals("status") || t.equals("s")) {
+                // this branch is just to skip error message
+                ok = printStatus = skipLog = true;
             }
         }
 
-        var1.sendChatToPlayer(mod_autoshutdown.getStatus());
+        if (printStatus) var1.sendChatToPlayer(mod_autoshutdown.getStatus());
+
+        if (!ok) {
+            var1.sendChatToPlayer("Unknown parameters. See /help for more info.");
+        }
+
+        if (ok && !skipLog && var1 instanceof Entity) {
+            MinecraftServer s = MinecraftServer.getServer();
+            Entity p = (Entity) var1;
+            s.logInfo("[" + mod_autoshutdown.Name + "] " + "\"" + p.getEntityName() + "\" used command: \"" + Joiner.on(" ").join(var2) + "\"");
+        }
     }
 
 }
