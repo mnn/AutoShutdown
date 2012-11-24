@@ -1,0 +1,31 @@
+[size=6]Auto-shutdown[/size]
+This is a server-only mod used for automatic shutting down after some time with no players online. It does "/save-all" 1 minute before expected shutting down.
+
+Sample config file:
+[code]general {
+   enabled=true
+   "force save"=true
+   minutes=10
+}[/code]
+
+[size=6]Download[/size]
+MC1.4.2 | 0.1.0 | tested with Forge #355 | [url="http://adf.ly/2536344/autoshutdown-010"]download[/url]
+[url="https://github.com/mnn/AutoShutdown"]source code[/url]
+
+[size=6]Installation[/size]
+0) if you don't have forge, get it [url="http://www.minecraftforge.net/wiki/Installation/Universal"]here[/url]
+1) move downloaded zip/jar file into your "minecraft/mods" directory
+2) run server, shutdown server, modify config to your liking
+
+[size=6]Rights of Use[/size]
+[b]You may[/b]
+- host the mod
+- use source code for educational purposes [size=2](but do not copy, use it just for inspiration - rewrite it on your own)[/size]
+[b]You may not[/b]
+- link directly zip/jar file, reupload
+- add mod into modpack without written permission
+
+[size=6]Donate[/size]
+If you like this mod, please consider donating. Every contribution would be highly apreciated.
+
+[url="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=U6PGB7P24WWSU&lc=CZ&item_name=monnef%27s%20Auto-shutdown&item_number=jaffas&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"][img]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/img][/url]
