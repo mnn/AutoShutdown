@@ -1,12 +1,6 @@
 [size=6]Auto-shutdown[/size]
-This is a server-only mod used for automatic shutting down after some time with no players online. It does "/save-all" 1 minute before expected shutting down.
+This is a server-only mod used for automatic shutting down after specified time with no players online.
 
-Sample config file:
-[code]general {
-   enabled=true
-   "force save"=true
-   minutes=10
-}[/code]
 
 [size=6]Download[/size]
 MC1.4.2 | 0.1.0 | tested with Forge #355 | [url="http://adf.ly/2536344/autoshutdown-010"]download[/url]
@@ -16,6 +10,29 @@ MC1.4.2 | 0.1.0 | tested with Forge #355 | [url="http://adf.ly/2536344/autoshutd
 0) if you don't have forge, get it [url="http://www.minecraftforge.net/wiki/Installation/Universal"]here[/url]
 1) move downloaded zip/jar file into your "minecraft/mods" directory
 2) run server, shutdown server, modify config to your liking
+
+[size=6]Configuration file[/size]
+Sample config file:
+[code]general {
+  enabled=true
+  "force save"=true
+  minutes=10
+}[/code]
+[list]
+[*]enabled - should mod be working?
+[*]force save - should mod be doing "save-all" one minute before expected shutdown?
+[*]minutes - number of player-free minutes after the server will be turned off
+[/list]
+
+[size=6]Commands[/size]
+[code]/asd = /autoshutdown
+usage: /asd [postpone=pp|on|off|status=s]
+postpone|pp    - set player-free minutes counter to 0
+off        - turn mod off
+on        - turn mod on
+status|s    - print status information
+[/code]
+All settings done through command(s) are NOT saved to the config!
 
 [size=6]Rights of Use[/size]
 [b]You may[/b]
