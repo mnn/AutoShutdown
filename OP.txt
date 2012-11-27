@@ -34,6 +34,9 @@ status|s    - print status information
 [/code]
 All settings done through command(s) are NOT saved to the config!
 
+[size=6]Example of Server Setup[/size]
+I wrote a short article describing how to use this mod with other commands/tools (under Linux). It can be found [url="http://366.hopto.org/blog/english/minecraft-server-with-forge-on-demand/"]here[/url].
+
 [size=6]Rights of Use[/size]
 [b]You may[/b]
 - host the mod
