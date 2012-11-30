@@ -3,6 +3,7 @@ This is a server-only mod used for automatic shutting down after specified time 
 
 
 [size=6]Download[/size]
+MC1.4.5 | 0.2.0 | tested with Forge #395 | [url="http://adf.ly/2536344/autoshutdown-020"]download[/url]
 MC1.4.2 | 0.1.0 | tested with Forge #355 | [url="http://adf.ly/2536344/autoshutdown-010"]download[/url]
 [url="https://github.com/mnn/AutoShutdown"]source code[/url]
 
@@ -19,8 +20,8 @@ Sample config file:
   minutes=10
 }[/code]
 [list]
-[*]enabled - should mod be working?
-[*]force save - should mod be doing "save-all" one minute before expected shutdown?
+[*]enabled - should the mod be working?
+[*]force save - should the mod be doing "save-all" one minute before expected shutdown?
 [*]minutes - number of player-free minutes after the server will be turned off
 [/list]
 
