@@ -15,7 +15,7 @@ import net.minecraft.src.ModLoader;
 import net.minecraft.src.ServerCommandManager;
 import net.minecraftforge.common.Configuration;
 
-@Mod(modid = "autoshutdown", name = mod_autoshutdown.Name, version = "0.1.0")
+@Mod(modid = "autoshutdown", name = mod_autoshutdown.Name, version = "0.2.0")
 @NetworkMod(clientSideRequired = false, serverSideRequired = true)
 public class mod_autoshutdown {
     public static final int minimumCountedMinutes = 2;
