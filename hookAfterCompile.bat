@@ -1,0 +1,2 @@
+bash hookAfterCompile.sh
+pause

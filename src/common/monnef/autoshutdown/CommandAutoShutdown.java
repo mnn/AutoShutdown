@@ -1,10 +1,10 @@
 package monnef.autoshutdown;
 
 import com.google.common.base.Joiner;
+import net.minecraft.command.CommandBase;
+import net.minecraft.command.ICommandSender;
+import net.minecraft.entity.Entity;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.src.CommandBase;
-import net.minecraft.src.Entity;
-import net.minecraft.src.ICommandSender;
 
 import java.util.ArrayList;
 import java.util.List;

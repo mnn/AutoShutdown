@@ -1,7 +1,6 @@
 package monnef.autoshutdown;
 
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Side;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -9,13 +8,14 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.TickRegistry;
+import cpw.mods.fml.relauncher.Side;
+import net.minecraft.command.ICommandManager;
+import net.minecraft.command.ServerCommandManager;
 import net.minecraft.server.MinecraftServer;
-import net.minecraft.src.ICommandManager;
 import net.minecraft.src.ModLoader;
-import net.minecraft.src.ServerCommandManager;
 import net.minecraftforge.common.Configuration;
 
-@Mod(modid = "autoshutdown", name = mod_autoshutdown.Name, version = "0.2.0")
+@Mod(modid = "autoshutdown", name = mod_autoshutdown.Name, version = "0.3.0")
 @NetworkMod(clientSideRequired = false, serverSideRequired = true)
 public class mod_autoshutdown {
     public static final int minimumCountedMinutes = 2;
@@ -24,7 +24,7 @@ public class mod_autoshutdown {
     public static mod_autoshutdown instance;
 
     @SidedProxy(clientSide = "monnef.autoshutdown.ClientProxy", serverSide = "monnef.autoshutdown.CommonProxy")
-    public static CommonProxy proxy;
+    public static monnef.autoshutdown.CommonProxy proxy;
 
     public final static String Name = "Auto-Shutdown";
 
