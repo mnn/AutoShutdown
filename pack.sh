@@ -1,7 +1,5 @@
 #!/bin/bash
 
-version=0.2.0
-
 output=jar_output
 outtmp=$output/tmp
 dist=$output/dist
@@ -19,6 +17,15 @@ rm -fr "./$dist/*"
 touch "$outtmp/.placeholder"
 
 echo Done
+
+echo -n Detecting version...
+version=`grep -Ei "version = \"" src/minecraft/monnef/autoshutdown/mod_autoshutdown.java | sed -r 's/^.*version = "(.*?)".*$/\1/'`
+verLen=${#version}
+if [ $verLen -lt 1 -o $verLen -gt 5 ]; then
+	echo "FAILURE"
+	exit 1
+fi
+echo " ($version) Done"
 
 echo -n Copying mod files...
 

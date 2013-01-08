@@ -1,0 +1,5 @@
+
+*.log
+temp/*
+bin/*
+eclipse\Minecraft\bin\*.class
