@@ -1,5 +1,24 @@
+/eclipse/Minecraft/nbproject/private/
+/eclipse/Minecraft/build/
+/eclipse/Minecraft/dist/
+/eclipse/Minecraft/bin/*
 
 *.log
-temp/*
-bin/*
-eclipse\Minecraft\bin\*.class
+/temp/*
+/bin/*
+/eclipse\Minecraft\bin\*.class
+
+/src/minecraft/*
+!/src/minecraft/monnef
+
+/jars/*
+/forge/*
+/runtime/*
+
+/jar_output/*
+/jar_output/tmp/*
+!/jar_output/tmp/.placeholder
+/jar_output/dist/*
+/reobf
+/conf
+/docs
