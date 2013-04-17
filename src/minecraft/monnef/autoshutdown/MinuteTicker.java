@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2013 monnef.
+ */
+
 package monnef.autoshutdown;
 
 import cpw.mods.fml.common.IScheduledTickHandler;
@@ -7,9 +11,12 @@ import net.minecraft.server.MinecraftServer;
 import java.util.EnumSet;
 
 public class MinuteTicker implements IScheduledTickHandler {
+    public static final int TICKS_PER_SECOND = 20;
+    public static final int TICKS_PER_MINUTE = TICKS_PER_SECOND * 60;
+
     @Override
     public int nextTickSpacing() {
-        return 20 * 60;
+        return TICKS_PER_MINUTE;
     }
 
     @Override
@@ -18,26 +25,26 @@ public class MinuteTicker implements IScheduledTickHandler {
 
     @Override
     public void tickEnd(EnumSet<TickType> type, Object... tickData) {
-        if (!mod_autoshutdown.active) return;
+        if (!AutoShutdown.active) return;
 
         MinecraftServer server = MinecraftServer.getServer();
         int players = server.getCurrentPlayerCount();
         if (players <= 0) {
-            mod_autoshutdown.minutesServerIsDead++;
+            AutoShutdown.minutesServerIsDead++;
 
-            if (mod_autoshutdown.minutesServerIsDead == mod_autoshutdown.getShutdownAfterXMinutes() - 1) {
-                if (mod_autoshutdown.doSave) {
-                    mod_autoshutdown.println("Forcing save 1m before potential shutdown.");
+            if (AutoShutdown.minutesServerIsDead == AutoShutdown.getShutdownAfterXMinutes() - 1) {
+                if (AutoShutdown.doSave) {
+                    AutoShutdown.println("Forcing save 1m before potential shutdown.");
                     server.executeCommand("save-all");
                 }
             }
 
-            if (mod_autoshutdown.minutesServerIsDead >= mod_autoshutdown.getShutdownAfterXMinutes()) {
-                mod_autoshutdown.println("No players detected in " + mod_autoshutdown.minutesServerIsDead + " minutes => shutting down server.");
+            if (AutoShutdown.minutesServerIsDead >= AutoShutdown.getShutdownAfterXMinutes()) {
+                AutoShutdown.println("No players detected in " + AutoShutdown.minutesServerIsDead + " minutes => shutting down server.");
                 server.initiateShutdown();
             }
         } else {
-            mod_autoshutdown.minutesServerIsDead = 0;
+            AutoShutdown.minutesServerIsDead = 0;
         }
     }
 

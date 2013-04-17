@@ -19,7 +19,7 @@ touch "$outtmp/.placeholder"
 echo Done
 
 echo -n Detecting version...
-version=`grep -Ei "version = \"" src/minecraft/monnef/autoshutdown/mod_autoshutdown.java | sed -r 's/^.*version = "(.*?)".*$/\1/'`
+version=`grep -Ei "version = \"" src/minecraft/monnef/autoshutdown/Autoshutdown.java | sed -r 's/^.*version = "(.*?)".*$/\1/'`
 verLen=${#version}
 if [ $verLen -lt 1 -o $verLen -gt 5 ]; then
 	echo "FAILURE"
@@ -29,7 +29,6 @@ echo " ($version) Done"
 
 echo -n Copying mod files...
 
-#cp eclipse/Minecraft/bin/jaffas_01.png eclipse/Minecraft/bin/jaffas_02.png eclipse/Minecraft/bin/jaffas_logo.png eclipse/Minecraft/bin/guifridge.png eclipse/Minecraft/bin/jaffabrn1.png eclipse/Minecraft/bin/mcmod.info eclipse/Minecraft/bin/guicollector.png eclipse/Minecraft/bin/sharpener.wav eclipse/Minecraft/bin/suck.wav "$outtmp"
 cp -r reobf/minecraft/monnef "$outtmp"
 
 outName="mod_autoshutdown_$version"

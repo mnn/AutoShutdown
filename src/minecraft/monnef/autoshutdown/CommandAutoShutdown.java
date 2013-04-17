@@ -1,3 +1,7 @@
+/*
+ * Copyright (c) 2013 monnef.
+ */
+
 package monnef.autoshutdown;
 
 import com.google.common.base.Joiner;
@@ -36,13 +40,13 @@ public class CommandAutoShutdown extends CommandBase {
         if (var2.length >= 1) {
             String t = var2[0].toLowerCase();
             if (t.equals("postpone") || t.equals("pp")) {
-                mod_autoshutdown.minutesServerIsDead = 0;
+                AutoShutdown.minutesServerIsDead = 0;
                 ok = printStatus = true;
             } else if (t.equals("on")) {
-                mod_autoshutdown.active = true;
+                AutoShutdown.active = true;
                 ok = printStatus = true;
             } else if (t.equals("off")) {
-                mod_autoshutdown.active = false;
+                AutoShutdown.active = false;
                 ok = printStatus = true;
             } else if (t.equals("status") || t.equals("s")) {
                 // this branch is just to skip error message
@@ -50,7 +54,7 @@ public class CommandAutoShutdown extends CommandBase {
             }
         }
 
-        if (printStatus) var1.sendChatToPlayer(mod_autoshutdown.getStatus());
+        if (printStatus) var1.sendChatToPlayer(AutoShutdown.getStatus());
 
         if (!ok) {
             var1.sendChatToPlayer("Unknown parameters. See /help for more info.");
@@ -59,7 +63,7 @@ public class CommandAutoShutdown extends CommandBase {
         if (ok && !skipLog && var1 instanceof Entity) {
             MinecraftServer s = MinecraftServer.getServer();
             Entity p = (Entity) var1;
-            s.logInfo("[" + mod_autoshutdown.Name + "] " + "\"" + p.getEntityName() + "\" used command: \"" + Joiner.on(" ").join(var2) + "\"");
+            s.logInfo("[" + AutoShutdown.Name + "] " + "\"" + p.getEntityName() + "\" used command: \"" + Joiner.on(" ").join(var2) + "\"");
         }
     }
 
