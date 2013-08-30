@@ -15,6 +15,14 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
 import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.registry.TickRegistry;
 import cpw.mods.fml.relauncher.Side;
+import externalAS.it.sauronsoftware.cron4j.InvalidPatternException;
+import externalAS.it.sauronsoftware.cron4j.Predictor;
+import externalAS.it.sauronsoftware.cron4j.Scheduler;
+import externalAS.it.sauronsoftware.cron4j.SchedulingPattern;
+import externalAS.org.joda.time.DateTime;
+import externalAS.org.joda.time.Period;
+import externalAS.org.joda.time.format.PeriodFormatter;
+import externalAS.org.joda.time.format.PeriodFormatterBuilder;
 import net.minecraft.command.ICommandManager;
 import net.minecraft.command.ServerCommandManager;
 import net.minecraft.server.MinecraftServer;
@@ -27,6 +35,7 @@ import java.util.Arrays;
 @NetworkMod(clientSideRequired = false, serverSideRequired = true)
 public class AutoShutdown {
     public static final int minimumCountedMinutes = 2;
+    public static final String GENERAL_CATEGORY = "general";
 
     @Mod.Instance("autoshutdown")
     public static AutoShutdown instance;
@@ -41,6 +50,26 @@ public class AutoShutdown {
     public static boolean doSave = true;
     public static boolean active = true;
     private static MinecraftServer server;
+    public static boolean idleShutdown = true;
+    public static boolean timeShutdown = false;
+    public static String timeShutdownPatternString = "";
+
+    private static TimeShutdownStatus timeStatus = TimeShutdownStatus.IDLE;
+    private static final Object timeStatusLock = new Object();
+
+    private Scheduler scheduler;
+
+    private static PeriodFormatter periodFormatter = new PeriodFormatterBuilder()
+            .appendYears().appendSuffix(" year", " years").appendSeparator(", ")
+            .appendMonths().appendSuffix(" month", " months").appendSeparator(", ")
+            .appendWeeks().appendSuffix(" week", " weeks").appendSeparator(", ")
+            .appendDays().appendSuffix(" day", " days").appendSeparator(", ")
+            .appendHours().appendSuffix("h").appendSeparator(" ")
+            .appendMinutes().appendSuffix("m").appendSeparator(" ")
+            .appendSeconds().appendSuffix("s")
+            .printZeroNever()
+            .toFormatter();
+    private SchedulingPattern timeShutdownPattern;
 
     public void handleMetadata() {
         ModMetadata meta = FMLCommonHandler.instance().findContainerFor(this).getMetadata();
@@ -60,24 +89,41 @@ public class AutoShutdown {
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
 
-        shutdownAfterXMinutes = config.get("general", "minutes", 10).getInt();
+        shutdownAfterXMinutes = config.get(GENERAL_CATEGORY, "minutes", 10).getInt();
         if (shutdownAfterXMinutes < minimumCountedMinutes) {
             println("Too small \"minutes\" value in config. Correcting shutdown timer to " + minimumCountedMinutes + "m.");
             shutdownAfterXMinutes = minimumCountedMinutes;
         }
 
-        doSave = config.get("general", "force save", true).getBoolean(true);
-        active = config.get("general", "enabled", true).getBoolean(true);
+        doSave = config.get(GENERAL_CATEGORY, "force save", true, "Trigger world save minute before shutdown?").getBoolean(true);
+        active = config.get(GENERAL_CATEGORY, "enabled", true, "If set to false this mod won't do anything.").getBoolean(true);
+        idleShutdown = config.get(GENERAL_CATEGORY, "idleShutdown", true, "Do shutdown after exact time with no players online?").getBoolean(true);
+        timeShutdown = config.get(GENERAL_CATEGORY, "timeShutdown", true, "Do shutdown at exact times?").getBoolean(true);
+        timeShutdownPatternString = config.get(GENERAL_CATEGORY, "timeShutdownPatter", "0 23 * * *", "Cron-like time pattern - for more info use google or http://www.sauronsoftware.it/projects/cron4j/manual.php#p02 .").getString();
         config.save();
     }
 
     @Mod.Init
     public void load(FMLInitializationEvent event) {
         handleMetadata();
+
+        if (timeShutdown) prepareScheduler();
         TickRegistry.registerScheduledTickHandler(new MinuteTicker(), Side.SERVER);
 
         println("Initialized");
         println(getStatus());
+    }
+
+    private void prepareScheduler() {
+        scheduler = new Scheduler();
+        try {
+            timeShutdownPattern = new SchedulingPattern(timeShutdownPatternString);
+            scheduler.schedule(timeShutdownPattern, new TimeShutdownTask());
+            scheduler.start();
+        } catch (InvalidPatternException e) {
+            println("Invalid time pattern.");
+            throw e;
+        }
     }
 
     @Mod.PostInit
@@ -105,14 +151,34 @@ public class AutoShutdown {
         manager.registerCommand(new CommandAutoShutdown());
     }
 
-    public static String getStatus() {
-        return "status: " + stringFromBool(active) + "; " +
-                minutesServerIsDead + "/" + getShutdownAfterXMinutes() +
-                "; save: " + stringFromBool(doSave);
+    public String getStatus() {
+        return String.format("status: %s; %d/%d; save: %s; time remaining: %s", stringFromBool(active), minutesServerIsDead, getShutdownAfterXMinutes(), stringFromBool(doSave), getRemainingTime());
+    }
+
+    private String getRemainingTime() {
+        if (timeShutdown) {
+            Predictor p = new Predictor(timeShutdownPattern);
+            DateTime nextMatch = new DateTime(p.nextMatchingTime());
+            DateTime now = new DateTime();
+            return periodFormatter.print(new Period(now, nextMatch));
+        } else {
+            return "disabled";
+        }
     }
 
     public static String stringFromBool(boolean input) {
         return input ? "ON" : "OFF";
     }
 
+    public static TimeShutdownStatus getTimeStatus() {
+        synchronized (timeStatusLock) {
+            return timeStatus;
+        }
+    }
+
+    public static void setTimeStatus(TimeShutdownStatus timeStatus) {
+        synchronized (timeStatusLock) {
+            AutoShutdown.timeStatus = timeStatus;
+        }
+    }
 }

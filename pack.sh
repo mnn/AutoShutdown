@@ -29,7 +29,8 @@ echo " ($version) Done"
 
 echo -n Copying mod files...
 
-cp -r reobf/minecraft/monnef "$outtmp"
+cp -r reobf/minecraft/monnef reobf/minecraft/external "$outtmp"
+cp bin_data/* "$outtmp"
 
 outName="mod_autoshutdown_$version"
 

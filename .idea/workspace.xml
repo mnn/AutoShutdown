@@ -1,32 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d443db7d-9629-4d3a-84d0-1a1a1a197e05" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/copyright/monnef.xml" />
-      <change type="DELETED" beforePath="D:\workspace\mc\env\1.5.0\as\mcp\src\minecraft\monnef\autoshutdown\mod_autoshutdown.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/ClientProxy.java" afterPath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/ClientProxy.java" />
+    <list default="true" id="d443db7d-9629-4d3a-84d0-1a1a1a197e05" name="Default" comment="Updated OP file.">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/TimeShutdownStatus.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/TimeShutdownTask.java" />
+      <change type="DELETED" beforePath="D:\workspace\mc\env\1.5.0\as\mcp\bin_data\fml_at.cfg" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\mc\env\1.5.0\as\mcp\bin_data\fml_marker.cfg" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\mc\env\1.5.0\as\mcp\bin_data\fmlversion.properties" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\mc\env\1.5.0\as\mcp\bin_data\forge_at.cfg" afterPath="" />
+      <change type="DELETED" beforePath="D:\workspace\mc\env\1.5.0\as\mcp\bin_data\mcpmod.info" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/CommandAutoShutdown.java" afterPath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/CommandAutoShutdown.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/CommonProxy.java" afterPath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/CommonProxy.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/MinuteTicker.java" afterPath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/MinuteTicker.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin_data/fml_at.cfg" afterPath="$PROJECT_DIR$/bin_data/fml_at.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin_data/fml_marker.cfg" afterPath="$PROJECT_DIR$/bin_data/fml_marker.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin_data/fmlversion.properties" afterPath="$PROJECT_DIR$/bin_data/fmlversion.properties" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin_data/forge_at.cfg" afterPath="$PROJECT_DIR$/bin_data/forge_at.cfg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/libs.xml" afterPath="$PROJECT_DIR$/.idea/libraries/libs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mcp725_as.iml" afterPath="$PROJECT_DIR$/mcp725_as.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin_data/mcpmod.info" afterPath="$PROJECT_DIR$/bin_data/mcpmod.info" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/ant.xml" afterPath="$PROJECT_DIR$/.idea/ant.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hookAfterCompile.bat" afterPath="$PROJECT_DIR$/hookAfterCompile.bat" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/hookAfterCompile.sh" afterPath="$PROJECT_DIR$/hookAfterCompile.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pack.sh" afterPath="$PROJECT_DIR$/pack.sh" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MOVED" beforePath="D:\workspace\mc\env\1.5.0\as\mcp\src\minecraft\monnef\autoshutdown\Autoshutdown.java" afterPath="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/AutoShutdown.java" />
     </list>
     <ignored path="mcp725.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/fragment.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1366225346470" ignored="false" />
+    <file path="/fragment.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1377869021410" ignored="false" />
     <file path="/mod_autoshutdown.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1366226973842" ignored="false" />
-    <file path="/CommandAutoShutdown.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1357654556184" ignored="false" />
-    <file path="/Dummy.txt" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1366224319421" ignored="false" />
+    <file path="/CommandAutoShutdown.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1377896125198" ignored="false" />
+    <file path="/Dummy.txt" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1377897197414" ignored="false" />
     <file path="$PROJECT_DIR$/logs/client_reob.log" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1357658131340" ignored="false" />
-    <file path="/MinuteTicker.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1366225620710" ignored="false" />
+    <file path="/MinuteTicker.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1377898388753" ignored="false" />
+    <file path="/AutoShutdown.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1377898442960" ignored="false" />
+    <file path="/TimeShutdownTask.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1377863638874" ignored="false" />
+    <file path="/DateTime.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1377868132125" ignored="false" />
+    <file path="/AbstractInstant.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1377868225433" ignored="false" />
+    <file path="/Instant.java" changelist="d443db7d-9629-4d3a-84d0-1a1a1a197e05" time="1377868233549" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,6 +46,7 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -48,6 +54,7 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -64,6 +71,7 @@
         <option name="ENABLED" value="false" />
         <option name="LOG_ENABLED" value="false" />
         <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
         <option name="SUSPEND_POLICY" value="SuspendAll" />
         <option name="SUSPEND" value="true" />
         <option name="COUNT_FILTER_ENABLED" value="false" />
@@ -75,7 +83,6 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -89,11 +96,8 @@
       <file leaf-file-name="AutoShutdown.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/AutoShutdown.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="83" selection-start="1910" selection-end="1910" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#4173#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state line="176" column="47" selection-start="7292" selection-end="7292" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -101,32 +105,48 @@
       <file leaf-file-name="CommandAutoShutdown.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/CommandAutoShutdown.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="29" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
+            <state line="43" column="31" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#0#2131#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CommonProxy.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/CommonProxy.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="15" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="e#0#97#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MinuteTicker.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="MinuteTicker.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/MinuteTicker.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="35" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.5505747">
+            <state line="12" column="54" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CommandServerSay.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/command/CommandServerSay.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="30" column="12" selection-start="820" selection-end="885" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TimeShutdownTask.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/TimeShutdownTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="31" selection-start="488" selection-end="488" vertical-scroll-proportion="0.38563326">
               <folding>
-                <element signature="e#0#1806#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MinecraftServer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/server/MinecraftServer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="934" column="23" selection-start="29420" selection-end="29420" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -149,16 +169,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/src/monnef/autoshutdown/mod_autoshutdown.java" />
-        <option value="$PROJECT_DIR$/src/monnef/autoshutdown/CommandAutoShutdown.java" />
-        <option value="$PROJECT_DIR$/src/monnef/autoshutdown/ClientProxy.java" />
-        <option value="$PROJECT_DIR$/src/common/monnef/autoshutdown/CommandAutoShutdown.java" />
-        <option value="$PROJECT_DIR$/src/common/monnef/autoshutdown/mod_autoshutdown.java" />
-        <option value="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/MinuteTicker.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/TimeShutdownStatus.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/org/x.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/external/it/sauronsoftware/cron4j/org/x.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/external/it/sauronsoftware/cron4j/q.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/external/q.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/external/ExternalPlaceholder.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/externalAS/org/joda/time/DateTime.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/externalAS/org/joda/time/base/AbstractInstant.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/externalAS/org/joda/time/Instant.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/org/joda/convert/qq.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/externalAS/org/qq.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/externalAS/org/joda/time/DateTimeZone.java" />
         <option value="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/CommandAutoShutdown.java" />
-        <option value="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/mod_autoshutdown.java" />
-        <option value="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/Autoshutdown.java" />
         <option value="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/AutoShutdown.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/MinuteTicker.java" />
+        <option value="$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/TimeShutdownTask.java" />
       </list>
     </option>
   </component>
@@ -195,7 +221,6 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -250,96 +275,42 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mcp725_as" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mcp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minecraft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minecraft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mcp725_as" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mcp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minecraft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="net" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minecraft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="command" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mcp725_as" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="mcp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="minecraft" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="autoshutdown" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcp725_as" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mcp" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="minecraft" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="externalAS" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/minecraft" />
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="OverrideImplement.combined" value="true" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
@@ -355,6 +326,13 @@
     <property name="dynamic.classpath" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="org" />
+      <recent name="it.sauronsoftware" />
+      <recent name="external" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.server">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -499,29 +477,31 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1928" height="1044" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32924107" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39955357" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38058037" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Kahlua" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="ASM" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1670224" sideWeight="0.6707589" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug with VisualVM" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16595517" sideWeight="0.61941963" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25111607" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="LuaJ" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Kahlua" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -552,7 +532,7 @@
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
     <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORISONTALLY" value="true" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
     <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
@@ -562,6 +542,10 @@
     <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
     <option name="LIMIT_HISTORY" value="true" />
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated OP file." />
@@ -575,6 +559,7 @@
     <option name="ACTIVE_VCS_NAME" />
     <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
     <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
     <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="Updated to MC 1.4.6.&#10;&#10;Forge config files are now copied to bin folder using after compilation hook." />
@@ -588,115 +573,122 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/minecraft/cpw/mods/fml/common/DummyModContainer.java">
+    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/command/ServerCommandManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="13" selection-start="394" selection-end="394" vertical-scroll-proportion="0.07816092" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/command/CommandBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="29" selection-start="8" selection-end="29" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/entity/DataWatcher.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="28" selection-start="8" selection-end="28" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/item/EnumRarity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="107" selection-end="107" vertical-scroll-proportion="0.088541664" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/world/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="6" selection-start="2063" selection-end="2063" vertical-scroll-proportion="0.19953325">
+        <state line="86" column="35" selection-start="3905" selection-end="3905" vertical-scroll-proportion="0.33687943">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/ClientProxy.java">
+    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/client/multiplayer/NetClientHandler.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="11" selection-start="11" selection-end="11" vertical-scroll-proportion="0.0">
+        <state line="1261" column="30" selection-start="55191" selection-end="55191" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/CommonProxy.java">
+    <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/TimeShutdownStatus.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="15" selection-start="53" selection-end="53" vertical-scroll-proportion="0.0">
+        <state line="7" column="53" selection-start="100" selection-end="100" vertical-scroll-proportion="0.13646789">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/minecraft/externalAS/ExternalPlaceholder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="32" selection-start="51" selection-end="51" vertical-scroll-proportion="0.038990825">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/minecraft/externalAS/org/joda/time/Instant.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="34" selection-start="1069" selection-end="1069" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#0#97#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/CommandAutoShutdown.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="29" selection-start="222" selection-end="222" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#2131#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/client/renderer/EntityRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1020" column="0" selection-start="36441" selection-end="36441" vertical-scroll-proportion="0.33266532">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/client/gui/FontRenderer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="826" column="0" selection-start="24777" selection-end="24777" vertical-scroll-proportion="0.33203125">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/cpw/mods/fml/common/Mod.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="245" column="23" selection-start="8810" selection-end="8810" vertical-scroll-proportion="-0.029296875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/AutoShutdown.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="83" selection-start="1910" selection-end="1910" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#0#4173#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/server/MinecraftServer.java">
+    <entry file="file://$PROJECT_DIR$/src/minecraft/externalAS/org/joda/time/base/AbstractInstant.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="419" column="16" selection-start="13918" selection-end="13918" vertical-scroll-proportion="0.3325554">
+        <state line="31" column="19" selection-start="1295" selection-end="1295" vertical-scroll-proportion="0.33333334">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/command/CommandServerStop.java">
+    <entry file="file://$PROJECT_DIR$/src/minecraft/externalAS/org/joda/time/DateTime.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="47" selection-start="579" selection-end="579" vertical-scroll-proportion="0.42988506">
+        <state line="26" column="18" selection-start="1010" selection-end="1010" vertical-scroll-proportion="0.35416666">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/server/integrated/IntegratedServer.java">
+    <entry file="file://$PROJECT_DIR$/src/minecraft/externalAS/org/joda/time/DateTimeZone.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="253" column="21" selection-start="8615" selection-end="8615" vertical-scroll-proportion="0.21820304">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/minecraft/externalAS/it/sauronsoftware/cron4j/Scheduler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="554" column="16" selection-start="16156" selection-end="16156" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/minecraft/externalAS/it/sauronsoftware/cron4j/SchedulingPattern.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="237" column="11" selection-start="7972" selection-end="7972" vertical-scroll-proportion="0.33333334">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/command/CommandServerSay.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="12" selection-start="820" selection-end="885" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/minecraft/net/minecraft/command/CommandServerSaveAll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="37" selection-start="938" selection-end="938" vertical-scroll-proportion="0.3553875">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/CommandAutoShutdown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="31" selection-start="1167" selection-end="1167" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/AutoShutdown.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="47" selection-start="7292" selection-end="7292" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/MinuteTicker.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="35" selection-start="1499" selection-end="1499" vertical-scroll-proportion="0.5505747">
+        <state line="12" column="54" selection-start="282" selection-end="282" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/minecraft/monnef/autoshutdown/TimeShutdownTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="31" selection-start="488" selection-end="488" vertical-scroll-proportion="0.38563326">
           <folding>
-            <element signature="e#0#1806#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -742,6 +734,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>scala_stuff</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -770,6 +763,7 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
+                <option value="0.5" />
               </list>
             </option>
           </splitter-proportions>

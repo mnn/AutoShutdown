@@ -32,7 +32,7 @@ public class CommandAutoShutdown extends CommandBase {
     }
 
     @Override
-    public void processCommand(ICommandSender var1, String[] var2) {
+    public void processCommand(ICommandSender sender, String[] var2) {
         boolean printStatus = false;
         boolean ok = false;
         boolean skipLog = false;
@@ -41,6 +41,7 @@ public class CommandAutoShutdown extends CommandBase {
             String t = var2[0].toLowerCase();
             if (t.equals("postpone") || t.equals("pp")) {
                 AutoShutdown.minutesServerIsDead = 0;
+                AutoShutdown.setTimeStatus(TimeShutdownStatus.IDLE);
                 ok = printStatus = true;
             } else if (t.equals("on")) {
                 AutoShutdown.active = true;
@@ -49,20 +50,19 @@ public class CommandAutoShutdown extends CommandBase {
                 AutoShutdown.active = false;
                 ok = printStatus = true;
             } else if (t.equals("status") || t.equals("s")) {
-                // this branch is just to skip error message
                 ok = printStatus = skipLog = true;
             }
         }
 
-        if (printStatus) var1.sendChatToPlayer(AutoShutdown.getStatus());
+        if (printStatus) sender.sendChatToPlayer(AutoShutdown.instance.getStatus());
 
         if (!ok) {
-            var1.sendChatToPlayer("Unknown parameters. See /help for more info.");
+            sender.sendChatToPlayer("Unknown parameters. See /help for more info.");
         }
 
-        if (ok && !skipLog && var1 instanceof Entity) {
+        if (ok && !skipLog && sender instanceof Entity) {
             MinecraftServer s = MinecraftServer.getServer();
-            Entity p = (Entity) var1;
+            Entity p = (Entity) sender;
             s.logInfo("[" + AutoShutdown.Name + "] " + "\"" + p.getEntityName() + "\" used command: \"" + Joiner.on(" ").join(var2) + "\"");
         }
     }

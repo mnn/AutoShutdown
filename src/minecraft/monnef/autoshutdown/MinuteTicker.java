@@ -10,9 +10,16 @@ import net.minecraft.server.MinecraftServer;
 
 import java.util.EnumSet;
 
+import static monnef.autoshutdown.AutoShutdown.println;
+
 public class MinuteTicker implements IScheduledTickHandler {
     public static final int TICKS_PER_SECOND = 20;
     public static final int TICKS_PER_MINUTE = TICKS_PER_SECOND * 60;
+    private final MinecraftServer server;
+
+    public MinuteTicker() {
+        server = MinecraftServer.getServer();
+    }
 
     @Override
     public int nextTickSpacing() {
@@ -27,25 +34,52 @@ public class MinuteTicker implements IScheduledTickHandler {
     public void tickEnd(EnumSet<TickType> type, Object... tickData) {
         if (!AutoShutdown.active) return;
 
-        MinecraftServer server = MinecraftServer.getServer();
+        if (AutoShutdown.idleShutdown) idleShutdownTick();
+        if (AutoShutdown.timeShutdown) timeShutdownTick();
+    }
+
+    private void timeShutdownTick() {
+        if (AutoShutdown.getTimeStatus() == TimeShutdownStatus.SAVING) {
+            save("Forcing save 1m before potential shutdown (scheduled shutdown).");
+            AutoShutdown.setTimeStatus(TimeShutdownStatus.SHUTDOWN);
+            broadcastMessage(String.format("[%s] Server will shutdown in one minute.", AutoShutdown.Name));
+        } else if (AutoShutdown.getTimeStatus() == TimeShutdownStatus.SHUTDOWN) {
+            println("Scheduled shutdown is taking place.");
+            shutDown();
+        }
+    }
+
+    private void idleShutdownTick() {
         int players = server.getCurrentPlayerCount();
         if (players <= 0) {
             AutoShutdown.minutesServerIsDead++;
 
             if (AutoShutdown.minutesServerIsDead == AutoShutdown.getShutdownAfterXMinutes() - 1) {
-                if (AutoShutdown.doSave) {
-                    AutoShutdown.println("Forcing save 1m before potential shutdown.");
-                    server.executeCommand("save-all");
-                }
+                save("Forcing save 1m before potential shutdown (no players around).");
             }
 
             if (AutoShutdown.minutesServerIsDead >= AutoShutdown.getShutdownAfterXMinutes()) {
-                AutoShutdown.println("No players detected in " + AutoShutdown.minutesServerIsDead + " minutes => shutting down server.");
-                server.initiateShutdown();
+                println("No players detected in " + AutoShutdown.minutesServerIsDead + " minutes => shutting down server.");
+                shutDown();
             }
         } else {
             AutoShutdown.minutesServerIsDead = 0;
         }
+    }
+
+    private void save(String msg) {
+        if (AutoShutdown.doSave) {
+            println(msg);
+            server.executeCommand("save-all");
+        }
+    }
+
+    private void broadcastMessage(String msg) {
+        server.getConfigurationManager().sendChatMsg(msg);
+    }
+
+    private void shutDown() {
+        server.initiateShutdown();
     }
 
     @Override
