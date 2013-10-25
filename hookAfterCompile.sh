@@ -1,8 +1,9 @@
 #!/bin/bash
 
 ed="eclipse/Minecraft/bin"
-bd="bin_data_forge"
-args="-d --preserve=all -f"
-cargs=""$args" "$bd/*" "$ed/""
+bdf="bin_data_forge"
+bd="bin_data"
+args="-d --preserve=all -fr"
+cargs=""$args" "$bd/*" "$bdf/*" "$ed/""
 
 cp $cargs

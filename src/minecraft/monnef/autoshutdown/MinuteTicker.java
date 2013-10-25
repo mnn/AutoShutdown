@@ -7,6 +7,7 @@ package monnef.autoshutdown;
 import cpw.mods.fml.common.IScheduledTickHandler;
 import cpw.mods.fml.common.TickType;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.util.ChatMessageComponent;
 
 import java.util.EnumSet;
 
@@ -15,10 +16,9 @@ import static monnef.autoshutdown.AutoShutdown.println;
 public class MinuteTicker implements IScheduledTickHandler {
     public static final int TICKS_PER_SECOND = 20;
     public static final int TICKS_PER_MINUTE = TICKS_PER_SECOND * 60;
-    private final MinecraftServer server;
 
-    public MinuteTicker() {
-        server = MinecraftServer.getServer();
+    private MinecraftServer getServer(){
+        return MinecraftServer.getServer();
     }
 
     @Override
@@ -50,7 +50,7 @@ public class MinuteTicker implements IScheduledTickHandler {
     }
 
     private void idleShutdownTick() {
-        int players = server.getCurrentPlayerCount();
+        int players = getServer().getCurrentPlayerCount();
         if (players <= 0) {
             AutoShutdown.minutesServerIsDead++;
 
@@ -70,16 +70,18 @@ public class MinuteTicker implements IScheduledTickHandler {
     private void save(String msg) {
         if (AutoShutdown.doSave) {
             println(msg);
-            server.executeCommand("save-all");
+            getServer().executeCommand("save-all");
         }
     }
 
     private void broadcastMessage(String msg) {
-        server.getConfigurationManager().sendChatMsg(msg);
+        ChatMessageComponent component = new ChatMessageComponent();
+        component.addText(msg);
+        getServer().getConfigurationManager().sendChatMsg(component);
     }
 
     private void shutDown() {
-        server.initiateShutdown();
+        getServer().initiateShutdown();
     }
 
     @Override

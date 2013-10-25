@@ -10,8 +10,8 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="mc_libs" level="project" />
-    <orderEntry type="library" exported="" name="libs" level="project" />
     <orderEntry type="library" exported="" name="runtime" level="project" />
+    <orderEntry type="library" exported="" name="1.6.4" level="project" />
   </component>
 </module>
 

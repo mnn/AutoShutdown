@@ -24,14 +24,16 @@ import externalAS.org.joda.time.Period;
 import externalAS.org.joda.time.format.PeriodFormatter;
 import externalAS.org.joda.time.format.PeriodFormatterBuilder;
 import net.minecraft.command.ICommandManager;
+import net.minecraft.command.ICommandSender;
 import net.minecraft.command.ServerCommandManager;
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.src.ModLoader;
+import net.minecraft.util.ChatMessageComponent;
 import net.minecraftforge.common.Configuration;
 
 import java.util.Arrays;
 
-@Mod(modid = "autoshutdown", name = AutoShutdown.Name, version = "0.4.0")
+@Mod(modid = "autoshutdown", name = AutoShutdown.Name, version = "0.6.0")
 @NetworkMod(clientSideRequired = false, serverSideRequired = true)
 public class AutoShutdown {
     public static final int minimumCountedMinutes = 2;
@@ -82,9 +84,9 @@ public class AutoShutdown {
         return shutdownAfterXMinutes;
     }
 
-    @Mod.PreInit
+    @Mod.EventHandler
     public void preInit(FMLPreInitializationEvent event) {
-        server = ModLoader.getMinecraftServerInstance();
+        server = FMLCommonHandler.instance().getMinecraftServerInstance();
 
         Configuration config = new Configuration(event.getSuggestedConfigurationFile());
         config.load();
@@ -99,11 +101,11 @@ public class AutoShutdown {
         active = config.get(GENERAL_CATEGORY, "enabled", true, "If set to false this mod won't do anything.").getBoolean(true);
         idleShutdown = config.get(GENERAL_CATEGORY, "idleShutdown", true, "Do shutdown after exact time with no players online?").getBoolean(true);
         timeShutdown = config.get(GENERAL_CATEGORY, "timeShutdown", true, "Do shutdown at exact times?").getBoolean(true);
-        timeShutdownPatternString = config.get(GENERAL_CATEGORY, "timeShutdownPatter", "0 23 * * *", "Cron-like time pattern - for more info use google or http://www.sauronsoftware.it/projects/cron4j/manual.php#p02 .").getString();
+        timeShutdownPatternString = config.get(GENERAL_CATEGORY, "timeShutdownPattern", "0 23 * * *", "Cron-like time pattern - for more info use google or http://www.sauronsoftware.it/projects/cron4j/manual.php#p02 .").getString();
         config.save();
     }
 
-    @Mod.Init
+    @Mod.EventHandler
     public void load(FMLInitializationEvent event) {
         handleMetadata();
 
@@ -126,7 +128,7 @@ public class AutoShutdown {
         }
     }
 
-    @Mod.PostInit
+    @Mod.EventHandler
     public void postInit(FMLPostInitializationEvent event) {
     }
 
@@ -139,7 +141,7 @@ public class AutoShutdown {
         }
     }
 
-    @Mod.ServerStarting
+    @Mod.EventHandler
     public void serverStarting(FMLServerStartingEvent event) {
         if (server == null) server = ModLoader.getMinecraftServerInstance();
         ICommandManager commandManager = server.getCommandManager();
@@ -180,5 +182,11 @@ public class AutoShutdown {
         synchronized (timeStatusLock) {
             AutoShutdown.timeStatus = timeStatus;
         }
+    }
+
+    public static void sendMessage(ICommandSender sender, String text) {
+        ChatMessageComponent component = new ChatMessageComponent();
+        component.addText(text);
+        sender.sendChatToPlayer(component);
     }
 }

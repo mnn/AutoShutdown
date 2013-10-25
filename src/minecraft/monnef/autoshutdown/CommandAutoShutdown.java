@@ -32,13 +32,13 @@ public class CommandAutoShutdown extends CommandBase {
     }
 
     @Override
-    public void processCommand(ICommandSender sender, String[] var2) {
+    public void processCommand(ICommandSender sender, String[] params) {
         boolean printStatus = false;
         boolean ok = false;
         boolean skipLog = false;
 
-        if (var2.length >= 1) {
-            String t = var2[0].toLowerCase();
+        if (params.length >= 1) {
+            String t = params[0].toLowerCase();
             if (t.equals("postpone") || t.equals("pp")) {
                 AutoShutdown.minutesServerIsDead = 0;
                 AutoShutdown.setTimeStatus(TimeShutdownStatus.IDLE);
@@ -54,16 +54,16 @@ public class CommandAutoShutdown extends CommandBase {
             }
         }
 
-        if (printStatus) sender.sendChatToPlayer(AutoShutdown.instance.getStatus());
+        if (printStatus) AutoShutdown.sendMessage(sender, AutoShutdown.instance.getStatus());
 
         if (!ok) {
-            sender.sendChatToPlayer("Unknown parameters. See /help for more info.");
+            AutoShutdown.sendMessage(sender, "Unknown parameters. See /help for more info.");
         }
 
         if (ok && !skipLog && sender instanceof Entity) {
             MinecraftServer s = MinecraftServer.getServer();
             Entity p = (Entity) sender;
-            s.logInfo("[" + AutoShutdown.Name + "] " + "\"" + p.getEntityName() + "\" used command: \"" + Joiner.on(" ").join(var2) + "\"");
+            s.logInfo("[" + AutoShutdown.Name + "] " + "\"" + p.getEntityName() + "\" used command: \"" + Joiner.on(" ").join(params) + "\"");
         }
     }
 

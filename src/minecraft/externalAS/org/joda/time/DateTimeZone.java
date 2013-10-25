@@ -487,7 +487,7 @@ public abstract class DateTimeZone implements Serializable {
 
         if (provider == null) {
             try {
-                provider = new ZoneInfoProvider("org/joda/time/tz/data");
+                provider = new ZoneInfoProvider("externalAS/org/joda/time/tz/data");
             } catch (Exception ex) {
                 Thread thread = Thread.currentThread();
                 thread.getThreadGroup().uncaughtException(thread, ex);

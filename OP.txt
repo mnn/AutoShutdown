@@ -1,14 +1,27 @@
-[size=6]Auto-shutdown[/size]
-This is a server-only mod used for automatic shutting down after specified time with no players online.
+[center][b][size=8]Auto-shutdown[/size][/b][/center]
 
+This is a server-only mod used for automatic shutting down after specified time with no players online. From version 0.5.0 it is also capable of shutting down server at specified times (uses quite powerful cron-like syntax for definition of time).
 
 [size=6]Download[/size]
-
-MC1.5.2/1    | 0.4.0 | tested with Forge #655 | [url="http://adf.ly/2536344/autoshutdown-0-4-0"]download[/url]
+MC1.6.4    | 0.6.0 | tested with Forge #884 | [url="http://adf.ly/2536344/autoshutdown-0-6-0"]download[/url]
+MC1.5.2/1    | 0.5.0 | tested with Forge #655 | [url="http://adf.ly/2536344/autoshutdown-0-5-0"]download[/url]
+[spoiler]MC1.5.2/1    | 0.4.0 | tested with Forge #655 | [url="http://adf.ly/2536344/autoshutdown-0-4-0"]download[/url]
 MC1.4.6/7 | 0.3.0 | tested with Forge #471 | [url="http://adf.ly/2536344/autoshutdown-030"]download[/url]
 MC1.4.5    | 0.2.0 | tested with Forge #395 | [url="http://adf.ly/2536344/autoshutdown-020"]download[/url]
 MC1.4.2    | 0.1.0 | tested with Forge #355 | [url="http://www.mediafire.com/?klpm28j5iorqutx"]download[/url]
+[/spoiler]
+
 [url="https://github.com/mnn/AutoShutdown"]source code[/url]
+Used libraries: [url="http://www.sauronsoftware.it/projects/cron4j/index.php"]cron4j[/url], [url="http://www.joda.org/joda-time/"]joda-time[/url]
+
+[size=6]Changelog[/size]
+0.6.0
+- ported to MC 1.6.4
+- fixed config option name: timeShutdownPatter -> timeShutdownPattern
+[spoiler]
+0.5.0
+- added scheduled shutdowns
+[/spoiler]
 
 [size=6]Installation[/size]
 0) if you don't have forge, get it [url="http://www.minecraftforge.net/wiki/Installation/Universal"]here[/url]
@@ -21,25 +34,36 @@ Sample config file:
     B:enabled=true
     B:"force save"=true
     I:minutes=10
-}[/code]
-[list]
+    B:idleShutdown=false
+    I:minutes=10
+    B:timeShutdown=true
+    S:timeShutdownPattern=*/1 * * * *
+}[/code][list]
 [*]enabled - should the mod be working?
 [*]force save - should the mod be doing "save-all" one minute before expected shutdown?
 [*]minutes - number of player-free minutes after the server will be turned off
+[*]idleShutdown - shutdown after exact time with no players online
+[*]timeShutdown - shutdown at exact times
+[*]timeShutdownPattern - cron-like time pattern - for more info use google or http://www.sauronsoftware.it/projects/cron4j/manual.php#p02 . Tip: You can input multiple cont-like patterns separated by "|".
 [/list]
-
 [size=6]Commands[/size]
 [code]/asd = /autoshutdown
 usage: /asd [postpone=pp|on|off|status=s]
-postpone|pp    - set player-free minutes counter to 0
-off        - turn mod off
-on        - turn mod on
-status|s    - print status information
+postpone|pp - set player-free minutes counter to 0
+off - turn mod off
+on - turn mod on
+status|s - print status information
 [/code]
 All settings done through command(s) are NOT saved to the config!
 
 [size=6]Example of Server Setup[/size]
 I wrote a short article describing how to use this mod with other commands/tools (under Linux). It can be found [url="http://366.hopto.org/blog/english/minecraft-server-with-forge-on-demand/"]here[/url].
+
+[size=6]Known Bugs[/size]
+I'm not sure if I ever correct these little bugs, they really don't affect much the functionality.
+
+- It uses sampling approach, so the accuracy is 1m.
+- Scheduled shutdown is commited in +1m after scheduled time (actually it's only marked to shudown, so it can even happen in +2m).
 
 [size=6]Rights of Use[/size]
 [b]You may[/b]
@@ -53,3 +77,4 @@ I wrote a short article describing how to use this mod with other commands/tools
 If you like this mod, please consider donating. Every contribution would be highly apreciated.
 
 [url="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=U6PGB7P24WWSU&lc=CZ&item_name=monnef%27s%20Auto-shutdown&item_number=jaffas&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted"][img]https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[/img][/url]
+

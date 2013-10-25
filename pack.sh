@@ -29,10 +29,10 @@ echo " ($version) Done"
 
 echo -n Copying mod files...
 
-cp -r reobf/minecraft/monnef reobf/minecraft/external "$outtmp"
-cp bin_data/* "$outtmp"
+cp -r reobf/minecraft/monnef reobf/minecraft/externalAS "$outtmp"
+cp -r bin_data/* "$outtmp"
 
-outName="mod_autoshutdown_$version"
+outName="autoshutdown_$version"
 
 cd "$outtmp"
 zip -q -9r "../$outName.jar" ./*
